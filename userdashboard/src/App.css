@@ -171,3 +171,12 @@ p {
   -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+.flex-row {
+  flex-direction: column;
+}
+
+.numorph {
+  border-radius: 27px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 41px 41px 81px #bcbcbc, -41px -41px 81px #ffffff;
+}

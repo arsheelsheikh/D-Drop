@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import './App.css';
 import Header from './components/Header';
+import FileUpload from './components/FileUpload';
 
 function App() {
   const [wallet, setWallet] = useState('');
@@ -39,12 +40,17 @@ function App() {
       <Header wallet={wallet} />
 
       <div className='App'>
-        <h1 className='text-center my-4 text-gradient'>
-          The Power of Decentralization Meets Ease of Use with D-Drop
-        </h1>
-        <div class='bg'></div>
-        <div class='bg bg2'></div>
-        <div class='bg bg3'></div>
+        <div className='container'>
+          <div className='row'>
+            <h1 className='text-center my-5 text-gradient'>
+              The Power of Decentralization Meets Ease of Use with D-Drop
+            </h1>
+            <div className='bg'></div>
+            <div className='bg bg2'></div>
+            <div className='bg bg3'></div>
+            <FileUpload wallet={wallet} provider={provider} contract={contract} />
+          </div>
+        </div>
       </div>
     </>
   );
