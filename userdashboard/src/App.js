@@ -1,9 +1,9 @@
 // import Upload from './artifacts/contracts/Upload.sol/Upload.json';
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
-import FileUpload from './components/FileUpload';
-import Display from './components/Display';
-import Modal from './components/Modal';
+// import FileUpload from './components/FileUpload';
+// import Display from './components/Display';
+// import Modal from './components/Modal';
 import './App.css';
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
           Share
         </button>
       )}
-      {modalOpen && <Modal setModalOpen={setModalOpen} contract={contract}></Modal>}
+      {/* {modalOpen && <Modal setModalOpen={setModalOpen} contract={contract}></Modal>} */}
 
       <div className='App'>
         <h1 style={{ color: 'white' }}>Gdrive 3.0</h1>
@@ -56,8 +56,8 @@ function App() {
         <div class='bg bg3'></div>
 
         <p style={{ color: 'white' }}>Account : {account ? account : 'Not connected'}</p>
-        <FileUpload account={account} provider={provider} contract={contract}></FileUpload>
-        <Display contract={contract} account={account}></Display>
+        {/* <FileUpload account={account} provider={provider} contract={contract}></FileUpload> */}
+        {/* <Display contract={contract} account={account}></Display> */}
       </div>
     </>
   );
