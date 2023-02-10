@@ -26,7 +26,15 @@ function App() {
         const signer = provider.getSigner();
         const address = await signer.getAddress();
         setWallet(address);
+        let contractAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
 
+        const contract = new ethers.Contract(
+          contractAddress,
+          // eslint-disable-next-line no-undef
+          Upload.abi,
+          signer
+        );
+        //console.log(contract);
         setContract(contract);
         setProvider(provider);
       } else {
