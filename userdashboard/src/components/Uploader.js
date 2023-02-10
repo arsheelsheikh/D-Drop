@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 // import './FileUpload.css';
-const FileUpload = ({ contract, wallet, provider }) => {
+const Uploader = ({ contract, wallet, provider }) => {
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState('No file selected');
 
@@ -48,21 +48,19 @@ const FileUpload = ({ contract, wallet, provider }) => {
   return (
     <div className='row '>
       <form className='form border col-6 mx-auto rounded p-5 numorph' onSubmit={handleSubmit}>
-        <label htmlFor='uploadFile' className='choose'>
-          Choose Image
-        </label>
+        <h3 className='m-0'>Selcet files to store safely</h3>
         <br />
         <input disabled={!wallet} type='file' id='uploadFile' name='data' onChange={retrieveFile} />
         <br />
 
-        <span className='textArea d-block my-2'>Slected Image: {fileName}</span>
+        <span className='d-block my-2'>Slected Image: {fileName}</span>
         <br />
 
-        <button type='submit' className='upload btn btn-primary' disabled={!file}>
+        <button type='submit' className='upload btn-3' disabled={!file}>
           Upload File
         </button>
       </form>
     </div>
   );
 };
-export default FileUpload;
+export default Uploader;

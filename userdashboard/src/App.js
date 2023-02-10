@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import './App.css';
 import Header from './components/Header';
-import FileUpload from './components/FileUpload';
+import Uploader from './components/Uploader';
 
 function App() {
   const [wallet, setWallet] = useState('');
@@ -48,7 +48,7 @@ function App() {
             <div className='bg'></div>
             <div className='bg bg2'></div>
             <div className='bg bg3'></div>
-            <FileUpload wallet={wallet} provider={provider} contract={contract} />
+            <Uploader wallet={wallet} provider={provider} contract={contract} />
           </div>
         </div>
       </div>

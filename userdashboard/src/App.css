@@ -83,11 +83,6 @@ h1 {
   }
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 body {
   height: 900px;
 }
@@ -101,50 +96,28 @@ header {
   overflow: hidden;
   border-radius: 0 0 85% 85% / 30%;
 }
-header .overlay {
-  width: 100%;
-  height: 100%;
-  padding: 50px;
-  /* color: #fff; */
-  text-shadow: 1px 1px 1px #333;
-  /* background-image: linear-gradient(135deg, #9f05ff69 10%, #fd5e086b 100%); */
-}
 
 h1 {
   font-size: 60px;
   margin-bottom: 30px;
 }
-
+.text-gradient {
+  font-weight: 700;
+  background: #121fcf;
+  background: linear-gradient(to right, #121fcf 19%, #c800cf 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 h3,
 p {
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 30px;
-}
-.share {
-  padding: 16px;
-  margin-top: 10px;
-  vertical-align: center;
-  background: #f44336;
-  width: 70px;
-  height: 45px;
-  /* color: white; */
-  border: none;
-  border-radius: 4px;
-  font-size: 13px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  z-index: -1;
 }
 
 .share:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.text-gradient {
-  background: #121fcf;
-  background: linear-gradient(to right, #121fcf 19%, #c800cf 80%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .customBadge {
   z-index: 1;
   background-color: green;
@@ -179,4 +152,105 @@ p {
   border-radius: 27px;
   background: linear-gradient(145deg, #f0f0f0, #cacaca);
   box-shadow: 41px 41px 81px #bcbcbc, -41px -41px 81px #ffffff;
+}
+
+.upload-btn {
+  width: 8.125rem;
+  height: 2.5rem;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.625em 1.5em;
+  font-family: inherit;
+  font-weight: 700;
+  background: transparent;
+  cursor: pointer;
+  transition: all 3000ms ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  border: none;
+}
+
+.btn-3 {
+  background-color: rgb(0, 172, 238);
+  background-image: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+  width: 8.125rem;
+  height: 2.5rem;
+  line-height: 2.625rem;
+  padding: 0;
+  border: none;
+}
+
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  background-color: rgba(2, 126, 251, 1);
+  transition: all 300ms ease;
+}
+
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+
+.btn-3:hover {
+  background: transparent;
+  box-shadow: none;
+}
+
+.btn-3:hover:before {
+  height: 100%;
+}
+
+.btn-3:hover:after {
+  width: 100%;
+}
+
+.btn-3 span:hover {
+  color: rgba(2, 126, 251, 1);
+}
+
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  background: rgba(2, 126, 251, 1);
+  transition: all 0.3s ease;
+}
+
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+
+.btn-3 span:hover:before {
+  height: 100%;
+}
+
+.btn-3 span:hover:after {
+  width: 100%;
 }
